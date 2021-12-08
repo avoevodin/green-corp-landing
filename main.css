@@ -150,3 +150,20 @@ button:hover {
     box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
     transition: ease-in 0.3s;
 }
+
+footer {
+    margin: 90px 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__copyright {
+    text-align: center;
+    margin-top: 40px;
+    opacity: 0.5;
+}
