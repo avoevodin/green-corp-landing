@@ -186,3 +186,16 @@ footer {
 .footer__links a {
     margin-bottom: 15px;
 }
+
+@keyframes rotation {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.about__sun-image {
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
