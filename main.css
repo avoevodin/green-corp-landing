@@ -126,7 +126,8 @@ button {
     margin-bottom: 15px;
 }
 
-.form input, select {
+.form input,
+select {
     font-size: 18px;
     color: #213053;
     height: 60px;
@@ -203,4 +204,79 @@ footer {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     position: absolute;
+}
+
+@media (max-width: 719px) {
+    body {
+        padding: 50px 10px;
+    }
+    
+    footer {
+        padding: 50px 10px;
+
+    }
+    
+    header {
+        padding: 10px 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header a {
+        margin-right: 5px;
+    }
+
+    .header__logo {
+        height: 20px;
+    }
+
+    .header__controls {
+        display: flex;
+        align-items: center;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about {
+        padding: 40px 5px;
+        flex-direction: column-reverse;
+    }
+
+    .about__image {
+        width: 280px;
+    }
+
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .form {
+        padding: 40px ©;
+    }
+
+    .form h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .form form {
+        margin: 0px 10px;
+    }
+
+    footer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 10px 5px;
+    }
+    .footer__container {
+        flex-direction: column;
+    }
 }
