@@ -207,17 +207,9 @@ footer {
 }
 
 @media (max-width: 719px) {
-    body {
-        padding: 50px 10px;
-    }
-    
-    footer {
-        padding: 50px 10px;
-
-    }
     
     header {
-        padding: 10px 5px;
+        padding: 10px 10px;
         display: flex;
         justify-content: space-between;
     }
@@ -245,7 +237,7 @@ footer {
     }
 
     .about {
-        padding: 40px 5px;
+        padding: 50px 10px;
         flex-direction: column-reverse;
     }
 
@@ -259,7 +251,7 @@ footer {
     }
 
     .form {
-        padding: 40px 5px;
+        padding: 50px 10px;
     }
 
     .form h1 {
@@ -267,15 +259,11 @@ footer {
         line-height: 40px;
     }
 
-    .form form {
-        margin: 0px 10px;
+    footer {
+        padding: 50px 10px;
+        margin: 0;
     }
 
-    footer {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin: 10px 5px;
-    }
     .footer__container {
         flex-direction: column;
     }
