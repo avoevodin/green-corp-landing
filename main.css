@@ -318,4 +318,8 @@ footer {
         margin: 0;
     }
 
+    .footer__links a {
+        font-size: 13px;
+    }
+
 }
