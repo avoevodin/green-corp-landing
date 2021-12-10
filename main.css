@@ -206,9 +206,6 @@ footer {
     position: absolute;
 }
 
-i {
-    font-family: "FontAwesome";
-}
 @media (max-width: 720px) {
     
     header {
