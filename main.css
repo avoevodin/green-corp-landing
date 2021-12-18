@@ -192,6 +192,18 @@ footer {
     margin-bottom: 15px;
 }
 
+.features {
+    background-color: #fff;
+    padding: 115px 60px;
+}
+
+.cards {
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr;
+    grid-gap: 50px;
+    padding: 35px 25px 40px 40px;
+}
+
 @keyframes rotation {
     to {
         transform: rotate(1turn);
@@ -266,6 +278,14 @@ footer {
 
     .footer__container {
         flex-direction: column;
+    }
+
+    .features {
+        padding: 50px 10px;
+    }
+
+    .cards {
+        grid-template-columns: auto;
     }
 }
 
