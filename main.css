@@ -206,7 +206,15 @@ footer {
 .card {
     padding: 35px 25px 40px 40px;
     border: 1px solid #D9E4E6;
+    border-radius: 5px;
 }
+
+.card p {
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.8;
+}
+
 @keyframes rotation {
     to {
         transform: rotate(1turn);
