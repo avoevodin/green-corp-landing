@@ -201,9 +201,12 @@ footer {
     display: grid;
     grid: 1fr / 1fr 1fr 1fr;
     grid-gap: 50px;
-    padding: 35px 25px 40px 40px;
 }
 
+.card {
+    padding: 35px 25px 40px 40px;
+    border: 1px solid #D9E4E6;
+}
 @keyframes rotation {
     to {
         transform: rotate(1turn);
