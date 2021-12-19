@@ -150,12 +150,6 @@ input {
     outline: none;
 }
 
-button:hover {
-    background-color: #f6980c;
-    box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
-    transition: ease-in 0.3s;
-}
-
 footer {
     margin: 90px 20px;
     font-size: 16px;
@@ -357,6 +351,12 @@ footer {
 .promo__button-icon {
     font-size: 15px;
     margin-left: 5px;
+}
+
+button:hover {
+    background-color: #f6980c;
+    box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
+    transition: ease-in 0.3s;
 }
 
 @keyframes rotation {
