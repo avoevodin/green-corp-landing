@@ -313,7 +313,7 @@ footer {
     padding: 160px 60px;
 }
 
-.promo__right .card {
+.promo__card {
     background-color: #fff;
     padding: 30px 40px;
     font-size: 20px;
@@ -322,18 +322,19 @@ footer {
     border-radius: 25px;
 }
 
-.promo__right .card p {
+.promo__card p {
     opacity: 0.8;
 }
 
-.promo__circle {
+.promo__card p::before {
+    content: '';
     display: inline-block;
-    border-radius: 50%;
-    background-color: #ec6b29;
     width: 10px;
     height: 10px;
+    border-radius: 50%;
+    background-color: #ec6b29;
     margin-right: 10px;
-}
+  }
 
 .promo__button-container {
     display: flex;
