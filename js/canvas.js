@@ -7,7 +7,8 @@ class Bubble {
     }
 
     getCanvasSize() {
-
+        this.canvasWidth = this.canvas.clientWidth
+        this.canvasHeigth = this.canvas.clientHeight
     }
 
     init() {
