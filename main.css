@@ -360,6 +360,13 @@ button:hover {
     transition: ease-in 0.3s;
 }
 
+.orb-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
 @keyframes rotation {
     to {
         transform: rotate(1turn);
