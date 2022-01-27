@@ -41,7 +41,9 @@ class Bubble {
 
 class CanvasBackground {
     constructor(id) {
-
+        this.canvas = document.getElementById(id)
+        this.ctx = this.canvas.getContext("2d")
+        this.dpr = window.devicePixelRatio
     }
 
     start() {
