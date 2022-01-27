@@ -1,7 +1,7 @@
 const COLORS = ["255,108,80", "5,117,18", "29,39,57", "67,189,81"];
 
 function generateDecimalBetween(left, right) {
-    return (Math.random() * (left - right) + rigth).toFixed(2);
+    return (Math.random() * (left - right) + right).toFixed(2);
 }
 class Bubble {
     constructor(canvas) {
@@ -38,3 +38,20 @@ class Bubble {
             }
     }
 }
+
+class CanvasBackground {
+    constructor(id) {
+
+    }
+
+    start() {
+        
+    }
+}
+
+const canvas = document.getElementById("orb-canvas")
+const bubbles = [];
+bubbles.push(new Bubble(canvas));
+bubbles.push(new Bubble(canvas));
+bubbles.push(new Bubble(canvas));
+console.log(bubbles)
