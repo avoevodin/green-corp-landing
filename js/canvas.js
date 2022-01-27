@@ -48,10 +48,3 @@ class CanvasBackground {
         
     }
 }
-
-const canvas = document.getElementById("orb-canvas")
-const bubbles = [];
-bubbles.push(new Bubble(canvas));
-bubbles.push(new Bubble(canvas));
-bubbles.push(new Bubble(canvas));
-console.log(bubbles)
