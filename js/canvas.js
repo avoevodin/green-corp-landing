@@ -1,5 +1,5 @@
 const COLORS = ["255,108,80", "5,117,18", "29,39,57", "67,189,81"];
-const BUBBLE_DENSITY = 100
+const BUBBLE_DENSITY = 100;
 
 function generateDecimalBetween(left, right) {
     return (Math.random() * (left - right) + right).toFixed(2);
@@ -58,5 +58,12 @@ class CanvasBackground {
         this.canvas.width = this.canvas.offsetWidth * this.dpr;
         this.canvas.height = this.canvas.offsetHeight * this.dpr;
         this.ctx.scale(this.dpr, this.dpr);
+    }
+
+    generateBubbles() {
+        bubblesList = [];
+        for (let i = 1; i <= BUBBLE_DENSITY; i++) {
+            bubblesList.push(new Bubble(this.canvas))
+        }
     }
 }
