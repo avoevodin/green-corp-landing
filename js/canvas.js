@@ -14,7 +14,7 @@ class Bubble {
     }
 
     init() {
-        this.color = Math.floor(Math.random() * COLORS.length)
+        this.color = COLORS[Math.floor(Math.random() * COLORS.length)]
     }
 
     move() {
