@@ -83,3 +83,5 @@ class CanvasBackground {
 
     }
 }
+
+new CanvasBackground("orb-canvas").start()
