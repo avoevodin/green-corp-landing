@@ -53,8 +53,8 @@ class CanvasBackground {
     }
 
     canvasSize() {
-        this.canvas.width = this.canvas.offsetWidth * this.dpr
-        this.canvas.height = this.canvas.offsetHeight * this.dpr
-        this.ctx.scale(this.dpr, this.dpr)
+        this.canvas.width = this.canvas.offsetWidth * this.dpr;
+        this.canvas.height = this.canvas.offsetHeight * this.dpr;
+        this.ctx.scale(this.dpr, this.dpr);
     }
 }
