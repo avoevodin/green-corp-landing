@@ -63,7 +63,23 @@ class CanvasBackground {
     generateBubbles() {
         bubblesList = [];
         for (let i = 1; i <= BUBBLE_DENSITY; i++) {
-            bubblesList.push(new Bubble(this.canvas))
+            bubblesList.push(new Bubble(this.canvas));
         }
+    }
+
+    animate() {
+        this.ctx.clearRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight);
+        this.bubblesList.forEach(bubble => {
+            bubble.move();
+            this.ctx.translate(bubble.translateX, bubble.translateY);
+            this.ctx.beginPath();
+            this.ctx.arc(0, 0, bubble.size, 0, 2 * Math.PI);
+            this.ctx.fillStyle = `rgba(${bubble.color}, ${bubble.alpha})`;
+            this.ctx.fill();
+            this.ctx.setTransform(this.dpr, this.dpr);
+            animate_binded = this.animate.bind(this);
+            requestAnimationFrame(animate_binded);
+        });
+
     }
 }
