@@ -20,7 +20,7 @@ class Bubble {
 
     init() {
         this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
-        this.size = generateDecimalBetween(1, 3);
+        this.size = generateDecimalBetween(1, 5);
         this.alpha = generateDecimalBetween(5, 10) / 10;
         this.translateX = generateDecimalBetween(0, this.canvasWidth);
         this.translateY = generateDecimalBetween(0, this.canvasHeigth);
@@ -78,7 +78,7 @@ class CanvasBackground {
             this.ctx.fill();
             this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
         });
-        requestAnimationFrame(this.animate.bind(this));
+        let requestId = requestAnimationFrame(this.animate.bind(this));
     }
 }
 
