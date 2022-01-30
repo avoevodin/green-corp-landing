@@ -21,7 +21,8 @@ function initIncreaseNumberAnimation() {
 initIncreaseNumberAnimation();
 
 document.querySelector("#budget").addEventListener("change", function handleSelectChange(event) {
-    
+    const otherInput = document.querySelector(".form__other-input");
+
     if (event.target.value === "other") {
         const formContainer = document.createElement("div");
         formContainer.classList.add("form__group", "form__other-input");
@@ -31,7 +32,10 @@ document.querySelector("#budget").addEventListener("change", function handleSele
         input.type = "text";
 
         formContainer.appendChild(input);
-    } else {
 
+        document.querySelector("#form form").insertBefore(formContainer,
+            document.querySelector(".form_submit"));
+    } else if (Boolean(otherInput)) {
+        document.querySelector("#form form").removeChild(otherInput);
     }
 })
