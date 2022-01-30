@@ -24,7 +24,10 @@ document.querySelector("#budget").addEventListener("change", function handleSele
     
     if (event.target.value === "other") {
         const formContainer = document.createElement("div");
-        formContainer.classList.add("form__group", "form__other-input")
+        formContainer.classList.add("form__group", "form__other-input");
+        const input = document.createElement("input");
+        input.placeholder = "Введите ваш вариант";
+        input.type = "text";
     } else {
 
     }
