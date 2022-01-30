@@ -19,3 +19,13 @@ function initIncreaseNumberAnimation() {
 }
 
 initIncreaseNumberAnimation();
+
+document.querySelector("#budget").addEventListener("change", function handleSelectChange(event) {
+    
+    if (event.target.value === "other") {
+        const formContainer = document.createElement("div");
+        formContainer.classList.add("form__group", "form__other-input")
+    } else {
+
+    }
+})
