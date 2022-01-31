@@ -1,4 +1,5 @@
 const INCREASE_NUMBER_ANIMATION_SPEED = 50;
+let animation_inited = false;
 
 function increaseNumberAnimationStep(i, element, endNumber) {
     if (i <= endNumber) {
@@ -19,16 +20,31 @@ function initIncreaseNumberAnimation() {
 }
 
 function updateScroll() {
-    let header_classList = document.querySelector("header").classList;
-
+    let headerClassList = document.querySelector("header").classList;
     if (window.scrollY > 0) {
-        header_classList.add("header__scrolled");
+        headerClassList.add("header__scrolled");
     } else {
-        header_classList.remove("header__scrolled");
+        headerClassList.remove("header__scrolled");
+    }
+
+    let countElementTopPosition = document.querySelector(".features__clients-count").offsetTop;
+    let windowBottomPosition = window.scrollY + window.innerHeight;
+    if (windowBottomPosition >= countElementTopPosition && animation_inited === false) {
+        initIncreaseNumberAnimation();
+        animation_inited = true
     }
 }
 
-initIncreaseNumberAnimation();
+function onLinkClick(event) {
+    event.preventDefault();
+    document.querySelector(event.target.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function addSmoothScroll(anchor) {
+    anchor.addEventListener("click", onLinkClick)
+}
 
 document.querySelector("#budget").addEventListener("change", function handleSelectChange(event) {
     const otherInput = document.querySelector(".form__other-input");
@@ -51,3 +67,9 @@ document.querySelector("#budget").addEventListener("change", function handleSele
 })
 
 window.addEventListener("scroll", updateScroll);
+updateScroll();
+
+document.querySelectorAll("a[href^='#']").forEach(anchor => {
+    addSmoothScroll(anchor);
+})
+addSmoothScroll(document.querySelector(".more-button"));
