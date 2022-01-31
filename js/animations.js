@@ -18,6 +18,16 @@ function initIncreaseNumberAnimation() {
     increaseNumberAnimationStep(0, element, 5000);
 }
 
+function updateScroll() {
+    let header_classList = document.querySelector("header").classList;
+
+    if (window.scrollY > 0) {
+        header_classList.add("header__scrolled");
+    } else {
+        header_classList.remove("header__scrolled");
+    }
+}
+
 initIncreaseNumberAnimation();
 
 document.querySelector("#budget").addEventListener("change", function handleSelectChange(event) {
@@ -39,3 +49,5 @@ document.querySelector("#budget").addEventListener("change", function handleSele
         document.querySelector("#form form").removeChild(otherInput);
     }
 })
+
+window.addEventListener("scroll", updateScroll);
